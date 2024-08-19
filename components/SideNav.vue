@@ -44,7 +44,7 @@ export default {
                 alert("シェアする内容を入力してください");
                 return;
             }
-            firebase.auth().onAuthSTateChanged(async (user) => {
+            firebase.auth().onAuthStateChanged(async (user) => {
                 const { data } = await this.$axios.post(
                     "htt@://localhost:80/api/v1/post",
                     {
